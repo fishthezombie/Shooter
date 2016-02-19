@@ -24,8 +24,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497428}
-  - 61: {fileID: 6155036}
-  - 50: {fileID: 5095070}
+  - 61: {fileID: 6143504}
+  - 50: {fileID: 5054604}
   - 114: {fileID: 11494952}
   m_Layer: 0
   m_Name: Bullet
@@ -59,7 +59,7 @@ Transform:
   - {fileID: 488412}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5095070
+--- !u!50 &5054604
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
@@ -76,7 +76,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6155036
+--- !u!61 &6143504
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -89,7 +89,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.3}
+  m_Size: {x: 0.4, y: 0.4}
 --- !u!114 &11494952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +140,23 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_TagString
-      value: PlayerBullet
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

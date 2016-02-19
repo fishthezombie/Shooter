@@ -35,9 +35,7 @@ public class PlayerController : MonoBehaviour {
                 Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
                 Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
                 0f
-                );
-
-            Debug.Log("x: " + mousePos.x + " y: " + mousePos.y);
+                );          
 
             //Set the bullet spawn point
             Vector3 bulletPos = new Vector3(
@@ -47,13 +45,14 @@ public class PlayerController : MonoBehaviour {
                 );
 
             //Set the bullet to face towards the mouse click's point
-            float opp = Mathf.Abs(transform.position.x - mousePos.x);
-            float adj = Mathf.Abs(transform.position.y - mousePos.y);
-            float rotationAngle = Mathf.Atan2(opp, adj);
+            float opp = (mousePos.x - transform.position.x);
+            float adj = (mousePos.y - transform.position.y);
+            float rotateAngle = (180 / Mathf.PI) * Mathf.Atan2(opp, adj);
+            Quaternion rotateByAngle = Quaternion.Euler(0, 0, -rotateAngle);
 
             //Instantiate the bullet
             Rigidbody2D bulletClone;
-            bulletClone = Instantiate(bullet, bulletPos, Quaternion.Euler(0f,0f,rotationAngle)) as Rigidbody2D;
+            bulletClone = Instantiate(bullet, bulletPos, rotateByAngle) as Rigidbody2D;
         }
 	}
 }

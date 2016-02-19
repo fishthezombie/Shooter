@@ -2,12 +2,6 @@
 using System.Collections;
 
 public class GameArea : MonoBehaviour {
-    BoxCollider2D areaCollider;
-
-	// Use this for initialization
-	void Start () {
-        areaCollider = GetComponent<BoxCollider2D>();
-	}
 	
 	//Detect collider's trigger
     void OnTriggerExit2D(Collider2D checkObject)
