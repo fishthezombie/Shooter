@@ -97,6 +97,7 @@ GameObject:
   - 4: {fileID: 675191701}
   - 61: {fileID: 675191700}
   - 114: {fileID: 675191702}
+  - 114: {fileID: 675191703}
   m_Layer: 0
   m_Name: Game Area
   m_TagString: Untagged
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 14, y: 14}
+  m_Size: {x: 16, y: 16}
 --- !u!4 &675191701
 Transform:
   m_ObjectHideFlags: 0
@@ -141,6 +142,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a6b27867bc19d48b75c9fff2bfeaa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &675191703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 675191699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e59539160099f4fa96a218e90561cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyShip: {fileID: 5038026, guid: ee2d580ff2921f2489fbb9d64ad4ce99, type: 2}
 --- !u!1 &823679174
 GameObject:
   m_ObjectHideFlags: 0
